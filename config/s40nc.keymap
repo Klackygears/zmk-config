@@ -76,5 +76,16 @@
             bindings = <&kp ESC>;
         };
         
+        combo_clmk {
+            timeout-ms = <50>;
+            key-positions = <0 34>;
+            bindings = <&tog COLEMAK>;
+        };
+        
+        combo_dflt {
+            timeout-ms = <50>;
+            key-positions = <0 35>;
+            bindings = <&tog DEFAULT>;
+        };
     };
 };
