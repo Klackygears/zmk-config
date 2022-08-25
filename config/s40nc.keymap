@@ -10,9 +10,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define LOWER   1
-#define RAISE   2
-#define CONTROL 3
+#define COLEMAK 1
+#define LOWER   2
+#define RAISE   3
+#define CONTROL 4
 
 / {
 	keymap {
@@ -23,6 +24,15 @@
                 &kp ESC    &kp Q     &kp W     &kp E  &kp R     &kp T      &kp Y   &kp U  &kp I     &kp O     &kp P     &kp BSPC
                 &mo LOWER  &kp A     &kp S     &kp D  &kp F     &kp G      &kp H   &kp J  &kp K     &kp L               &kp ENTER
                 &kp LSHFT  &kp Z     &kp X     &kp C  &kp V     &kp B      &kp N   &kp M  &kp FSLH            &kp UP    &kp RSHFT
+                &kp LCTRL  &kp LGUI  &kp LALT  &lt LOWER SPACE  &lt CONTROL SPACE  &lt RAISE SPACE  &kp LEFT  &kp DOWN  &kp RIGHT
+			>;
+		};
+
+		colemak_layer {
+			bindings = <
+                &kp TAB    &kp Q     &kp W     &kp F  &kp P     &kp G      &kp J   &kp L  &kp U     &kp Y     &kp SEMI  &kp BSPC
+                &kp BSPC   &kp A     &kp R     &kp S  &kp T     &kp D      &kp H   &kp N  &kp E     &kp I               &kp O
+                &kp LSHFT  &kp Z     &kp X     &kp C  &kp V     &kp B      &kp K   &kp M  &kp FSLH            &kp UP    &kp RSHFT
                 &kp LCTRL  &kp LGUI  &kp LALT  &lt LOWER SPACE  &lt CONTROL SPACE  &lt RAISE SPACE  &kp LEFT  &kp DOWN  &kp RIGHT
 			>;
 		};
@@ -56,3 +66,20 @@
 	};
 };
             
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        
+        combo_clmk {
+            timeout-ms = <50>;
+            key-positions = <0 34>;
+            bindings = <&lt COLEMAK>;
+        };
+    };
+};
