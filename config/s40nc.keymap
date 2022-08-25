@@ -65,21 +65,4 @@
 		};
 	};
 };
-            
-/ {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-        
-        combo_clmk {
-            timeout-ms = <50>;
-            key-positions = <0 34>;
-            bindings = <&lt COLEMAK>;
-        };
-    };
-};
+ 
