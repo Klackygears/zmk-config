@@ -13,4 +13,5 @@
 #
 ---
 include:
-  - board: s40nc
+  - board: nice_nano
+    shield: eek
