@@ -7,8 +7,6 @@
 #define DEFAULT 0
 #define NUMB   1
 #define SYMB   2
-#define FUNC   3
-#define MDIA   4
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
