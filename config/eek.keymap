@@ -7,6 +7,8 @@
 #define DEFAULT 0
 #define NUMB   1
 #define SYMB   2
+#define FUNC   3
+#define MDIA   4
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -55,6 +57,17 @@
             &kp LSHFT &kp F9 &kp F10 &kp F11 &kp F12 &none &none &none &kp RSHFT
             &kp LCTRL &kp LGUI &kp LALT &reset &none &trans
            >;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
         };
     };
 };
