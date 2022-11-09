@@ -69,20 +69,29 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+    };
+    combos {
+        compatible = "zmk,combos";
         combo_exclaim {
             timeout-ms = <50>;
             key-positions = <2 3>;
             bindings = <&kp EXCL>;
         };
+    };
+    combos {
+        compatible = "zmk,combos";
         combo_question {
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp QMARK>;
         };
+    };
+    combos {
+        compatible = "zmk,combos";
         combo_pound {
             timeout-ms = <50>;
             key-positions = <2 11>;
-            bindings = <&kp POUND>;
+            bindings = <&kp HASH>;
         };
     };
 };
