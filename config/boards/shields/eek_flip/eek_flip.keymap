@@ -59,10 +59,14 @@
            >;
         };
     };
-};
-
-/ {
     combos {
+        compatible = "zmk,combos";
+        combo_exclaim {
+            timeout-ms = <100>;
+            key-positions = <2 3>;
+            bindings = <&kp EXCL>;
+        };
+    };combos {
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
@@ -72,16 +76,8 @@
     };
     combos {
         compatible = "zmk,combos";
-        combo_exclaim {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&kp EXCL>;
-        };
-    };
-    combos {
-        compatible = "zmk,combos";
         combo_question {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <1 2>;
             bindings = <&kp QMARK>;
         };
@@ -89,7 +85,7 @@
     combos {
         compatible = "zmk,combos";
         combo_pound {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <2 11>;
             bindings = <&kp HASH>;
         };
