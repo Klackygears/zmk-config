@@ -74,15 +74,15 @@
             key-positions = <2 3>;
             bindings = <&kp EXCL>;
         };
-        combo_exclaim {
+        combo_question {
             timeout-ms = <50>;
             key-positions = <1 2>;
             bindings = <&kp QMARK>;
         };
-        combo_exclaim {
+        combo_pound {
             timeout-ms = <50>;
             key-positions = <2 11>;
-            bindings = <&kp HASH>;
+            bindings = <&kp POUND>;
         };
     };
 };
