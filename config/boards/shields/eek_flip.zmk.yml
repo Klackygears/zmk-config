@@ -1,6 +1,6 @@
 file_format: "1"
 id: eek_flip
-name: eek!
+name: eek!flip
 type: shield
 url: https://github.com/Klackygears/eek_doc
 requires: [pro_micro]

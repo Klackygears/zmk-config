@@ -4,6 +4,6 @@
 if SHIELD_EEK_FLIP
 
 config ZMK_KEYBOARD_NAME
-    default "eek! ~ Keyboard"
+    default "eek!"
 
 endif
