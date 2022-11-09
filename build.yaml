@@ -16,4 +16,4 @@ include:
   - board: nice_nano
     shield: eek
   - board: nice_nano
-    shield: eek_flipped
+    shield: eek_flip
