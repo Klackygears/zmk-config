@@ -16,6 +16,38 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_exclaim {
+            timeout-ms = <100>;
+            key-positions = <2 3>;
+            bindings = <&kp EXCL>;
+        };
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <1 10>;
+            bindings = <&kp ESC>;
+        };
+        combo_question {
+            timeout-ms = <100>;
+            key-positions = <1 2>;
+            bindings = <&kp QMARK>;
+        };
+        combo_pound {
+            timeout-ms = <100>;
+            key-positions = <2 11>;
+            bindings = <&kp HASH>;
+        };
+    };
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp N1>, <&kp N2>, <&kp N3>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -57,37 +89,6 @@
             &kp LSHFT &kp F9 &kp F10 &kp F11 &kp F12 &none &none &none &kp RSHFT
             &kp LCTRL &kp LGUI &kp LALT &reset &none &trans
            >;
-        };
-    };
-    combos {
-        compatible = "zmk,combos";
-        combo_exclaim {
-            timeout-ms = <100>;
-            key-positions = <2 3>;
-            bindings = <&kp EXCL>;
-        };
-    };combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <1 10>;
-            bindings = <&kp ESC>;
-        };
-    };
-    combos {
-        compatible = "zmk,combos";
-        combo_question {
-            timeout-ms = <100>;
-            key-positions = <1 2>;
-            bindings = <&kp QMARK>;
-        };
-    };
-    combos {
-        compatible = "zmk,combos";
-        combo_pound {
-            timeout-ms = <100>;
-            key-positions = <2 11>;
-            bindings = <&kp HASH>;
         };
     };
 };
