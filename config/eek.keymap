@@ -57,7 +57,7 @@
         COMBO(c_rpar,    &kp RPAR,    12 13,    50, DEFAULT)
         
         COMBO(ccaret,    &kp CARET,   10 23,    50, DEFAULT)
-        COMBO(ctilde,    &kp TILDE,   11 23,    50, DEFAULT)
+        COMBO(c_tild,    &kp TILDE,   11 12 23, 50, DEFAULT)
         COMBO(c_grv,     &kp GRAVE,   12 23,    50, DEFAULT)
 
         COMBO(c_min,     &kp MINUS,   5 6,      50, DEFAULT)
