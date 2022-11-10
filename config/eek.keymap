@@ -16,6 +16,8 @@
 #define FUNC   3
 #define MDIA   4
 
+#define ALL_LYR 0 1 2 3 4
+
 #define COMBO(NAME, BINDINGS, KEYPOS, TERM, LAYERS) \
         combo_##NAME { \
             timeout-ms = <TERM>; \
@@ -27,10 +29,33 @@
 / {
     combos {
         compatible = "zmk,combos";
-        COMBO(cexclaim,  &kp EXCL,  2 3,      50, DEFAULT)
-        COMBO(combo_esc, &kp ESC,   0 1,      50, DEFAULT)
-        COMBO(cquestion, &kp QMARK, 1 2,      50, DEFAULT)
-        COMBO(cpound,    &kp HASH,  2 11,     50, DEFAULT)
+        COMBO(cexclaim,  &kp EXCL,    2 3,      50, DEFAULT)
+        COMBO(combo_esc, &kp ESC,     0 1,      50, DEFAULT)
+        COMBO(cquestion, &kp QMARK,   1 2,      50, DEFAULT)
+        COMBO(c_dqt,     &kp DQT,     0 11,     50, DEFAULT)
+        COMBO(c_at,      &kp AT,      1 10,     50, DEFAULT)
+        COMBO(cpound,    &kp HASH,    2 11,     50, DEFAULT)
+        COMBO(cdollar,   &kp DLLR,    3 12,     50, DEFAULT)
+        COMBO(cpercent,  &kp PRCNT,   4 13,     50, DEFAULT)
+        COMBO(cpercent,  &kp PRCNT,   4 13,     50, DEFAULT)
+        COMBO(c_amp,     &kp AMPS,    13 14,    50, DEFAULT)
+
+        COMBO(clbrace,   &kp LBRC,    10 11,    50, DEFAULT)
+        COMBO(crbrace,   &kp RBRC,    10 12,    50, DEFAULT)
+
+        COMBO(clbrak,    &kp LBKT,    11 12,    50, DEFAULT)
+        COMBO(crbrak,    &kp RBKT,    10 13,    50, DEFAULT)
+        
+        COMBO(clpar,     &kp LPAR,    13 14,    50, DEFAULT)
+        COMBO(crpar,     &kp RPAR,    13 14,    50, DEFAULT)
+        
+        COMBO(ccaret,    &kp CARET,   11 22,    50, DEFAULT)
+        COMBO(ctilde,    &kp TILDE,   12 23,    50, DEFAULT)
+        COMBO(cgrv,      &kp GRAVE,   13 24,    50, DEFAULT)
+        
+        COMBO(cplus,     &kp KP_PLUS, 5 16,     50, 1)
+        COMBO(cmult,     &kp ASTRK,   15 16,    50, 1)
+        COMBO(cequ,      &kp EQUAL,   17 26,    50, 0 1)
     };
     behaviors {
         td0: tap_dance_0 {
