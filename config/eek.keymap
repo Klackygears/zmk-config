@@ -37,7 +37,6 @@
         COMBO(cpound,    &kp HASH,    2 11,     50, DEFAULT)
         COMBO(cdollar,   &kp DLLR,    3 12,     50, DEFAULT)
         COMBO(cpercent,  &kp PRCNT,   4 13,     50, DEFAULT)
-        COMBO(cpercent,  &kp PRCNT,   4 13,     50, DEFAULT)
         COMBO(c_amp,     &kp AMPS,    13 14,    50, DEFAULT)
 
         COMBO(clbrace,   &kp LBRC,    10 11,    50, DEFAULT)
@@ -51,7 +50,7 @@
         
         COMBO(ccaret,    &kp CARET,   11 22,    50, DEFAULT)
         COMBO(ctilde,    &kp TILDE,   12 23,    50, DEFAULT)
-        COMBO(c_grv,     &kp GRAVE,   14 24,    50, DEFAULT)
+        COMBO(c_grv,     &kp GRAVE,   13 24,    50, DEFAULT)
 
         COMBO(c_min,     &kp MINUS,   5 6,      50, DEFAULT)
         COMBO(c_pipe,    &kp PIPE,    6 7,      50, DEFAULT)
