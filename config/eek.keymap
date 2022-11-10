@@ -46,8 +46,8 @@
         COMBO(clbrak,    &kp LBKT,    11 12,    50, DEFAULT)
         COMBO(crbrak,    &kp RBKT,    10 13,    50, DEFAULT)
         
-        COMBO(c_lpar,    &kp LS(N9),  13 14,    50, DEFAULT)
-        COMBO(c_rpar,    &kp LS(N0),  13 14,    50, DEFAULT)
+        COMBO(c_lpar,    &kp LPAR,    11 13,    50, DEFAULT)
+        COMBO(c_rpar,    &kp RPAR,    12 13,    50, DEFAULT)
         
         COMBO(ccaret,    &kp CARET,   11 22,    50, DEFAULT)
         COMBO(ctilde,    &kp TILDE,   12 23,    50, DEFAULT)
