@@ -4,27 +4,31 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define DEFAULT 0
-#define NUMB   1
-#define SYMB   2
-#define FUNC   3
-#define MDIA   4
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define DEFAULT 0
+#define NUMB   1
+#define SYMB   2
+#define FUNC   3
+#define MDIA   4
+
+#define COMBO(NAME, BINDINGS, KEYPOS, TERM, LAYERS) \
+        combo_##NAME { \
+            timeout-ms = <TERM>; \
+            bindings = <BINDINGS>; \
+            key-positions = <KEYPOS>; \
+            layers = <LAYERS>; \
+        };
+
 / {
     combos {
         compatible = "zmk,combos";
-        cexclaim {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            bindings = <&kp EXCL>;
-			layers = <DEFAULT>;
-        };
+        COMBO(cexclaim, &kp EXCL, 2 3,      50, DEFAULT)
+        
         combo_esc {
             timeout-ms = <50>;
             key-positions = <1 10>;
