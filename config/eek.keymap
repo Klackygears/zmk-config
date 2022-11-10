@@ -51,7 +51,7 @@
         
         COMBO(ccaret,    &kp CARET,   11 22,    50, DEFAULT)
         COMBO(ctilde,    &kp TILDE,   12 23,    50, DEFAULT)
-        COMBO(c_grv,     &kp GRAVE,   13 24,    50, DEFAULT)
+        COMBO(c_grv,     &kp GRAVE,   14 24,    50, DEFAULT)
 
         COMBO(c_min,     &kp MINUS,   5 6,      50, DEFAULT)
         COMBO(c_pipe,    &kp PIPE,    6 7,      50, DEFAULT)
@@ -96,7 +96,7 @@
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
            bindings = <
             &kp ESC   &kp F1   &trans    &trans   &trans       &trans       &trans       &none &trans    &td0
-            &kp CAPS  &kp F5   &trans    &trans   &trans       &kp LBKT     &kp RBKT     &none &kp GRAVE &kp BSLH
+            &kp CAPS  &kp F5   &trans    &trans   &trans       &kp LBKT     &kp RBKT     &none &trans    &kp BSLH
             &kp LSHFT &kp F9   &trans    &trans   &trans       &none        &none        &none &kp RSHFT &kp N0
                                &trans    &trans   &trans       &trans       &trans       &trans
            >;
@@ -105,7 +105,7 @@
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
            bindings = <
             &bootloader &reset     &trans     &trans  &out OUT_TOG   &trans       &trans       &none &trans    &td0
-            &bt BT_CLR  &bt BT_NXT &bt BT_PRV &trans  &trans         &kp LBKT     &kp RBKT     &none &kp GRAVE &kp BSLH
+            &bt BT_CLR  &bt BT_NXT &bt BT_PRV &trans  &trans         &kp LBKT     &kp RBKT     &none &trans    &kp BSLH
             &trans      &trans     &trans     &trans  &trans         &none        &none        &none &kp RSHFT &kp N0
                                    &trans     &trans  &trans         &trans       &trans       &trans
            >;
