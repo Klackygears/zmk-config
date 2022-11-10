@@ -27,26 +27,10 @@
 / {
     combos {
         compatible = "zmk,combos";
-        COMBO(cexclaim, &kp EXCL, 2 3,      50, DEFAULT)
-        
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <1 10>;
-            bindings = <&kp ESC>;
-			layers = <DEFAULT>;
-        };
-        cquestion {
-            timeout-ms = <50>;
-            key-positions = <1 2>;
-            bindings = <&kp QMARK>;
-			layers = <DEFAULT>;
-        };
-        cpound {
-            timeout-ms = <50>;
-            key-positions = <2 11>;
-            bindings = <&kp HASH>;
-			layers = <DEFAULT>;
-        };
+        COMBO(cexclaim,  &kp EXCL,  2 3,      50, DEFAULT)
+        COMBO(combo_esc, &kp ESC,   0 1,      50, DEFAULT)
+        COMBO(cquestion, &kp QMARK, 1 2,      50, DEFAULT)
+        COMBO(cpound,    &kp HASH,  2 11,     50, DEFAULT)
     };
     behaviors {
         td0: tap_dance_0 {
