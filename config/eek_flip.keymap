@@ -27,7 +27,7 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <1 10>;
-            bindings = <&kp ESC>;
+            bindings = <&bt ESC>;
 			layers = <DEFAULT>;
         };
         cquestion {
