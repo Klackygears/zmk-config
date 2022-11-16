@@ -70,14 +70,14 @@
         COMBO(cequ,      &kp EQUAL,   17 26,    50, 0 1)
     };
     behaviors {
-        bhm: balanced_basic {
+        bl: layertap {
             compatible = "zmk,behavior-hold-tap";
-            label = "Basic Ballanced";
+            label = "LAYERTAP";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&lt>, <&kp>;
         };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
