@@ -70,10 +70,18 @@
         COMBO(cequ,      &kp EQUAL,   17 26,    50, 0 1)
     };
     behaviors {
+        bhm: balanced_basic {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Basic Ballanced";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
-            quick-tap-ms = <200>;
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp N1>, <&kp N2>, <&kp N3>;
