@@ -73,6 +73,7 @@
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
+            quick-tap-ms = <0>;
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp N1>, <&kp N2>, <&kp N3>;
@@ -84,37 +85,37 @@
         default {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
            bindings = <
-            &kp SQT       &kp COMMA  &kp DOT     &kp P      &kp Y            &kp F     &kp G     &kp C       &kp R      &kp L
-            &kp A         &kp O      &kp E       &kp U      &kp I            &kp D     &kp H     &kp T       &kp N      &kp S
-            &mt LGUI SEMI &mt LALT Q &mt RCTRL J &kp K      &kp X            &kp B     &kp M     &mt RCTRL W &mt RALT V &mt RGUI Z
-                                     &mo 3       &lt 1 BSPC &mt LSHIFT SPACE &lt 1 TAB &lt 2 RET &mo 4
+            &kp SQT       &kp COMMA  &kp DOT     &kp P      &kp Y              &kp F     &kp G     &kp C       &kp R      &kp L
+            &kp A         &kp O      &kp E       &kp U      &kp I              &kp D     &kp H     &kp T       &kp N      &kp S
+            &mt LGUI SEMI &mt LALT Q &mt RCTRL J &kp K      &kp X              &kp B     &kp M     &mt RCTRL W &mt RALT V &mt RGUI Z
+                                     &mo 3       &lt 1 BSPC &x LSHIFT SPACE    &lt 1 TAB &lt 2 RET &mo 4
             >;
         };
         numbers {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
            bindings = <
-            &kp PG_UP  &kp PG_DN &kp HOME  &kp END   &kp LC(F)      &kp MINUS  &kp N7     &kp N8 &kp N9 &kp COLON
-            &kp LEFT   &kp UP    &kp DOWN  &kp RIGHT &none          &kp FSLH   &kp N4     &kp N5 &kp N6 &kp SEMI
-            &kp LC(F6) &kp LC(A) &kp LC(C) &kp LC(V) &kp DEL        &kp DOT    &kp N1     &kp N2 &kp N3 &kp N0
-                                 &trans    &trans    &trans         &trans     &kp LSHIFT &kp N0
+            &kp PG_UP  &kp PG_DN &kp HOME  &kp END   &kp LC(F)      &kp MINUS  &kp N7         &kp N8 &kp N9 &kp COLON
+            &kp LEFT   &kp UP    &kp DOWN  &kp RIGHT &none          &kp FSLH   &kp N4         &kp N5 &kp N6 &kp SEMI
+            &kp LC(F6) &kp LC(A) &kp LC(C) &kp LC(V) &kp DEL        &kp DOT    &kp N1         &kp N2 &kp N3 &kp N0
+                                 &trans    &trans    &trans         &trans     &mt LSHIFT RET &kp N0
             >;
         };
         symbols {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
            bindings = <
-            &none       &none      &none    &none  &none      &none   &none     &none &none  &td0
-            &none       &none      &none    &none  &none      &none   &none     &none &none  &none
-            &none       &none      &none    &none  &none      &none   &none     &none &none  &none
-                                   &trans   &trans &trans     &trans  &trans    &trans
+            &none       &none      &none    &none  &none      &none    &none     &none &none  &td0
+            &none       &none      &none    &none  &none      &none    &none     &none &none  &none
+            &none       &none      &none    &none  &none      &none    &none     &none &none  &none
+                                   &trans   &trans &trans     &trans   &trans    &trans
            >;
         };
         function {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
            bindings = <
-            &bootloader &reset     &none      &none  &out OUT_TOG  &trans       &trans       &none &none     &td0
-            &bt BT_CLR  &bt BT_NXT &bt BT_PRV &none  &none         &kp LBKT     &kp RBKT     &none &none     &kp BSLH
-            &none       &none      &none      &none  &none         &none        &none        &none &kp RSHFT &kp N0
-                                   &trans     &trans &trans        &trans       &trans       &trans
+            &bootloader &reset     &none      &none   &out OUT_TOG  &trans     &kp F9       &kp F10      &kp F11  &kp F12
+            &bt BT_CLR  &bt BT_NXT &bt BT_PRV &none   &none         &none      &kp F5       &kp F6       &kp F7   &kp F8
+            &none       &kp LALT   &none      &kp TAB &none         &none      &kp F1       &kp F2       &kp F3   &kp F4
+                                   &trans     &trans  &kp LSHIFT    &trans     &trans       &trans
            >;
         };
         media {
