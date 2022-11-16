@@ -93,37 +93,37 @@
         numbers {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
            bindings = <
-            &kp PG_UP  &kp PG_DN &kp HOME  &kp END   &kp LC(F)      &kp MINUS  &kp N7 &kp N8 &kp N9 &kp COLON
-            &kp LEFT   &kp UP    &kp DOWN  &kp RIGHT &none          &kp FSLH   &kp N4 &kp N5 &kp N6 &kp SEMI
-            &kp LC(F6) &kp LC(A) &kp LC(C) &kp LC(V) &kp DEL        &kp DOT    &kp N1 &kp N2 &kp N3 &kp N0
-                                 &trans    &trans    &trans         &trans     &trans &trans
+            &kp PG_UP  &kp PG_DN &kp HOME  &kp END   &kp LC(F)      &kp MINUS  &kp N7     &kp N8 &kp N9 &kp COLON
+            &kp LEFT   &kp UP    &kp DOWN  &kp RIGHT &none          &kp FSLH   &kp N4     &kp N5 &kp N6 &kp SEMI
+            &kp LC(F6) &kp LC(A) &kp LC(C) &kp LC(V) &kp DEL        &kp DOT    &kp N1     &kp N2 &kp N3 &kp N0
+                                 &trans    &trans    &trans         &trans     &kp LSHIFT &kp N0
             >;
         };
         symbols {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
            bindings = <
-            &kp ESC   &kp F1   &trans    &trans   &trans       &trans       &trans       &none &trans    &td0
-            &kp CAPS  &kp F5   &trans    &trans   &trans       &kp LBKT     &kp RBKT     &none &trans    &kp BSLH
-            &kp LSHFT &kp F9   &trans    &trans   &trans       &none        &none        &none &kp RSHFT &kp N0
-                               &trans    &trans   &trans       &trans       &trans       &trans
+            &none       &none      &none    &none  &none      &none   &none     &none &none  &td0
+            &none       &none      &none    &none  &none      &none   &none     &none &none  &none
+            &none       &none      &none    &none  &none      &none   &none     &none &none  &none
+                                   &trans   &trans &trans     &trans  &trans    &trans
            >;
         };
         function {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
            bindings = <
-            &bootloader &reset     &trans     &trans  &out OUT_TOG   &trans       &trans       &none &trans    &td0
-            &bt BT_CLR  &bt BT_NXT &bt BT_PRV &trans  &trans         &kp LBKT     &kp RBKT     &none &trans    &kp BSLH
-            &trans      &trans     &trans     &trans  &trans         &none        &none        &none &kp RSHFT &kp N0
-                                   &trans     &trans  &trans         &trans       &trans       &trans
+            &bootloader &reset     &none      &none  &out OUT_TOG  &trans       &trans       &none &none     &td0
+            &bt BT_CLR  &bt BT_NXT &bt BT_PRV &none  &none         &kp LBKT     &kp RBKT     &none &none     &kp BSLH
+            &none       &none      &none      &none  &none         &none        &none        &none &kp RSHFT &kp N0
+                                   &trans     &trans &trans        &trans       &trans       &trans
            >;
         };
         media {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------
            bindings = <
-            &kp ESC   &kp F1   &trans   &trans  &trans       &rgb_ug RGB_TOG &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_SPI
-            &kp CAPS  &kp F5   &trans   &trans  &trans       &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_SPD
-            &kp LSHFT &kp F9   &trans   &trans  &trans       &rgb_ug RGB_EFR &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &trans
-                               &trans   &trans  &trans       &trans          &trans          &trans
+            &none  &none   &none   &none  &none       &rgb_ug RGB_TOG &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_SPI
+            &none  &none   &none   &none  &none       &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_SPD
+            &none  &none   &none   &none  &none       &rgb_ug RGB_EFR &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &trans
+                           &trans  &trans &trans      &trans          &trans          &trans
            >;
         };
     };
